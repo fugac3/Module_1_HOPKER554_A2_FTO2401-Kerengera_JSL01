@@ -10,7 +10,7 @@ function validateSyntax() {
         if(
             /\d/.test(input.split("_")[1]) //check if part after "_" has numbers
             && /[a-z]/i.test(input.split("_")[1]) && //check if part after "_" has letters
-            !/^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/.test(input.split("_")[1]) //check if part after "_" doesn't have special characters
+            !/[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(input.split("_")[1]) //check if part after "_" doesn't have special characters
         ){
             result = "Valid Syntax";  //if it meets above conditions, it is valid   
         }
